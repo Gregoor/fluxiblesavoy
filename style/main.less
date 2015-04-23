@@ -1,0 +1,88 @@
+@import (inline) '../node_modules/flexboxgrid/dist/flexboxgrid.css';
+@import '../node_modules/material-ui/src/less/scaffolding.less';
+@import '../node_modules/material-ui/src/less/components.less';
+
+@accent-1-color: #BC9756;
+
+html {
+  background-color: transparent;
+}
+
+body {
+  background-color: #97233F;
+  font-family: 'Roboto', sans-serif;
+}
+
+#content {
+  padding: 0 23px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo {
+  margin: 0 auto;
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 23px;
+}
+
+.movie {
+  margin-bottom: 10px;
+  background-color: white;
+
+  .shortie {
+    @shortie-height: 101px;
+    height: @shortie-height;
+
+    img {
+      width: 68px;
+      height: @shortie-height;
+    }
+
+    .title {
+      font-size: 19px;
+      line-height: 28px;
+      padding: 8px 8px 0;
+      margin-bottom: 13px;
+      letter-spacing: 0;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.87);
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .details {
+    background-color: #F5F5F5;
+
+    table {
+      th, td {
+        border: 1px solid black;
+        text-align: center;
+        &.today {
+          background-color: #97213f;
+          color: white;
+        }
+      }
+
+      th {
+        width: 67px;
+        background-color: #b3995d;
+        font-weight: 500;
+      }
+
+      td {
+        background-color: #EAE2C8;
+        &.empty {
+          background-color: #B1AB96;
+        }
+      }
+    }
+  }
+
+  &.selected {
+
+  }
+}
